@@ -1,5 +1,10 @@
 function Loader() {
-  return <p>Loading...</p>;
+  return(
+    <>
+      <br/>
+      <p>Loading...</p>
+    </>
+  )
 }
 
 export default Loader;

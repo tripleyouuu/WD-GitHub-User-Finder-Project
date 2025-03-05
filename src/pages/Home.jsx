@@ -10,13 +10,15 @@ function Home() {
   const { user, repos, error, loading, fetchUser } = useGitHubUser();
 
   return (
-    <div className="container">
+    <div className="main">
       <h1>GitHub User Finder</h1>
-      <SearchBar setUsername={setUsername} fetchUser={fetchUser} username={username} />
-      
-      {loading && <Loader />}
-      {error && <ErrorMessage message={error} />}
-      {user && <UserCard user={user} repos={repos} />}
+        <br/>
+        <SearchBar setUsername={setUsername} fetchUser={fetchUser} username={username} />
+      <div className="container">
+        {loading && <Loader />}
+        {error && <ErrorMessage message={error} />}
+        {user && <UserCard user={user} repos={repos} />}
+      </div>
     </div>
   );
 }
